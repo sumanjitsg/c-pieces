@@ -2,8 +2,8 @@
 
 /* Verify that the expression getchar() != EOF
  * is 0 or 1
- * Press Enter or Ctrl+d (EOF) to mark end of stream (Enter is taken as a character)
- * Press Ctrl+d (EOF) at beginning to come out of loop
+ * Press Enter or Ctrl+d (EOF) to mark end of stream (Enter is read as a character)
+ * Press Ctrl+d (EOF) at beginning of stream to come out of loop
  */
 
 int main()
