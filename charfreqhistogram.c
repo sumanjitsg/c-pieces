@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /*
- * Print histogram of frequencies of characters in input stream
+ * Print histogram of frequencies of characters from input stream
  */
 
 int main()
