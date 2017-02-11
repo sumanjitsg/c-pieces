@@ -6,7 +6,7 @@
 /* Print histogram of word lengths from input stream
  * Misreads arrow keys/special key combinations
  * (need ncurses/terminfo libraries to detect them)
-*/
+ */
 
 int main()
 {
