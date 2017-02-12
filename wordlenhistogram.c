@@ -11,7 +11,7 @@
 int main()
 {
 	int c, i, empty_stream, alpha_stream;
-	char word[MAX_WORD_LEN] = {'\0'};
+	char word[MAX_WORD_LEN] = "";
 	char *word_separators = " \t\n,.;:?!@#$%^*()-_=+`~[]{}\\|\'\"<>/";
 
 	alpha_stream = i = 0;
