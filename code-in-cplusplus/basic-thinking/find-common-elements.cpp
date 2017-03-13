@@ -87,8 +87,8 @@ int FindCommonElements::findCommonElements4(int in1[], int in2[], const int size
 }
 
 void FindCommonElements::testMain(const int n) {
-	int *in1 = new int[n];
-	int *in2 = new int[n];
+	int* in1 = new int[n];
+	int* in2 = new int[n];
 
 	srand(time(NULL));
 	for (int i = 0; i < n; ++i) {
@@ -104,6 +104,9 @@ void FindCommonElements::testMain(const int n) {
 	
 	cout << count << endl;
 	cout << "Time taken: " << (end - start) << " seconds" << endl;
+
+	delete[] in1;
+	delete[] in2;
 }
 
 
