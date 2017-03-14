@@ -3,13 +3,12 @@
 using namespace std;
 
 class Dummy {
+	int a;
+	int b;
 	public:
-	    int a;
-	    int b;
-
-	    Dummy(int a, int b);
-	    int sum(void);
-	    int mul(void);
+		Dummy(int a, int b);
+		int sum(void);
+		int mul(void);
 };
 
 Dummy::Dummy(int a, int b) {
