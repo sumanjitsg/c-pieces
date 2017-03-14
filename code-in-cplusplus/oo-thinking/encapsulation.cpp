@@ -17,20 +17,19 @@ Dummy::Dummy(int a, int b) {
 }
 
 int Dummy::sum() {
-	return (this->a + this->b);
+	return (a + b);
 }
 
 int Dummy::mul() {
-	return (this->a * this->b);
+	return (a * b);
 }
 
 int main() {
-	Dummy* d1 = new Dummy(10, 21);
-	Dummy* d2 = new Dummy(3, 15);
-	Dummy* d3 = new Dummy(14, 9);
-	cout << d1->sum() << endl;
-	cout << d2->sum() << endl;
-	cout << d3->mul() << endl;
-	delete d1, delete d2, delete d3;	
+	Dummy d1(10, 21);
+	Dummy d2(3, 15);
+	Dummy d3(14, 9);
+	cout << d1.sum() << endl;
+	cout << d2.sum() << endl;
+	cout << d3.mul() << endl;
 	return 0;
 }
