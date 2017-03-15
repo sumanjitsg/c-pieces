@@ -3,8 +3,8 @@
 using namespace std;
 
 class Dummy {
-	int a;
-	int b;
+		int a;
+		int b;
 	public:
 		Dummy(int a, int b);
 		int sum(void);
