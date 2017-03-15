@@ -12,8 +12,8 @@ class ArrayList: public IList {
 		int ar[5];
 		int size;
 	public:
-		ArrayList(void);
-		~ArrayList(void);
+		ArrayList();
+		~ArrayList();
 		int get(int index);
 };
 
@@ -24,7 +24,7 @@ ArrayList::ArrayList() {
 	cout << "ArrayList constructed with size: " << size << endl;
 }
 
-ArrayList::~ArrayList(void) {
+ArrayList::~ArrayList() {
 	cout << "ArrayList destructor called!" << endl;
 }
 
@@ -36,8 +36,8 @@ int ArrayList::get(int index = 0) {
 class LinkedList: public IList {
 		int* ptr;
 	public:
-		LinkedList(void);
-		~LinkedList(void);
+		LinkedList();
+		~LinkedList();
 		int get(int index);
 };
 
