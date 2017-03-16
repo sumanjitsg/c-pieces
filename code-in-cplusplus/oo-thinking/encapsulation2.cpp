@@ -1,8 +1,4 @@
 #include <iostream>
-#include <memory>
-
-using namespace std;
-
 class IList {
     public:
         virtual int get(int index) = 0;
