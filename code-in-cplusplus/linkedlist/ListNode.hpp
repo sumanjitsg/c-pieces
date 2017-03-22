@@ -4,7 +4,7 @@
 namespace mylinkedlist {
     
 	class ListNode {
-		public:
+        public:
 			int data;
 			ListNode* next;
             
@@ -23,4 +23,5 @@ namespace mylinkedlist {
 	};
 
 }
+
 #endif

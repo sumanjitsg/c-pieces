@@ -21,7 +21,7 @@ namespace mylinkedlist {
     }
     
     void displayList(ListNode* head) {
-        for (ListNode* current = head; current != NULL; current = current->next)
+        for (ListNode* current = head->next; current != NULL; current = current->next)
             cout << current->data << endl;
     }
 
