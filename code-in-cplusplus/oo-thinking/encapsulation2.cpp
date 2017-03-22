@@ -1,4 +1,5 @@
 #include <iostream>
+
 class IList {
     public:
         virtual int get(int index) = 0;
