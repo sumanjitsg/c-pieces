@@ -14,7 +14,7 @@ namespace mylinkedlist {
 			}
 
 			ListNode() {
-				this->next = NULL;
+                
 			}
             
             friend void addFirst(ListNode* head, int e);
