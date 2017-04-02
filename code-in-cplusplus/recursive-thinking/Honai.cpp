@@ -1,7 +1,9 @@
 #include <iostream>
+#include "Honai.hpp"
 using namespace std;
 
-void auxhonai1(int n, char src, char aux, char target, long* counter) {
+
+void Honai::auxhonai1(int n, char src, char aux, char target, long* counter) {
     if (n <= 0) return;
     auxhonai1(n-1, src, target, aux, counter);
     ++(*counter);
@@ -10,7 +12,7 @@ void auxhonai1(int n, char src, char aux, char target, long* counter) {
 }
 
 // TC = 2^n-1 = O(2^n), SC = n+1 = O(n)
-long honai1(int n, char src, char aux, char target) {
+long Honai::honai1(int n, char src, char aux, char target) {
     long* counter = new long;
     auxhonai1(n, src, aux, target, counter);
     long c = *counter;
@@ -19,7 +21,7 @@ long honai1(int n, char src, char aux, char target) {
 }
 
 // TC = O(n), SC = O(n)
-long honai2(int n, char src, char aux, char target) {
+long Honai::honai2(int n, char src, char aux, char target) {
     if (n <= 0) return 0;
     long* count_array = new long[n+1];
     count_array[0] = 0;
@@ -36,6 +38,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     int n = atoi(argv[1]);
-    cout << honai2(n, 'A', 'B', 'C') << endl;
+    Honai obj;
+    cout << obj.honai2(n, 'A', 'B', 'C') << endl;
     return 0;
 }
