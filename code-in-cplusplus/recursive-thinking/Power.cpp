@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// TC - O(n), SC - O(1)
 long pow1(int x, int n) {
     long res = 1;
     for (int i = 1; i <= n; ++i)
@@ -8,6 +9,7 @@ long pow1(int x, int n) {
     return res;
 }
 
+// TC <= O(logn), SC - O(logn)
 long pow2(int x, int n) {
     if (n <= 0)
         return 1;
