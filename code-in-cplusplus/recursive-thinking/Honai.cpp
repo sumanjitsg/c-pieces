@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void auxhonai(int n, char src, char aux, char target, int* counter) {
+void auxhonai1(int n, char src, char aux, char target, int* counter) {
     if (n <= 0) return;
     auxhonai(n-1, src, target, aux, counter);
     ++(*counter);
