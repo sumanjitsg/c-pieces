@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void auxhonai1(int n, char src, char aux, char target, int* counter) {
+void auxhonai1(int n, char src, char aux, char target, long* counter) {
     if (n <= 0) return;
-    auxhonai(n-1, src, target, aux, counter);
+    auxhonai1(n-1, src, target, aux, counter);
     ++(*counter);
     //cout << src << "->" << target << endl;
-    auxhonai(n-1, aux, src, target, counter);
+    auxhonai1(n-1, aux, src, target, counter);
 }
 
 // TC = 2^n-1 = O(2^n), SC = n+1 = O(n)
-int honai1(int n, char src, char aux, char target) {
-    int* counter = new int;
-    auxhonai(n, src, aux, target, counter);
-    int c = *counter;
+long honai1(int n, char src, char aux, char target) {
+    long* counter = new long;
+    auxhonai1(n, src, aux, target, counter);
+    long c = *counter;
     delete counter;
     return c;
 }
