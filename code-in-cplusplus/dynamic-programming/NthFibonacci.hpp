@@ -7,6 +7,7 @@ class NthFibonacci {
         int fib1(int n);
         int fib2(int n);
         int fib3(int n);
+        int fib4(int n);
 };
 
 #endif

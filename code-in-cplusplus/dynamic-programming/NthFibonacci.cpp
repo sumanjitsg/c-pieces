@@ -17,7 +17,6 @@ int NthFibonacci::auxfib2(int n, int* mem) {
     // fill memory with subproblem solutions
     return mem[n] = auxfib2(n-1, mem) + auxfib2(n-2, mem);
 }
-
 //tc:O(n), sc:O(n) = n + n
 int NthFibonacci::fib2(int n) {
     if (n <= 0) return 0;
@@ -37,6 +36,18 @@ int NthFibonacci::fib3(int n) {
     return mem[n];
 }
 
+//tc:O(n), sc:O(1)
+int NthFibonacci::fib4(int n) {
+    if (n <= 0) return 0;
+    int x = 1, y = 0, sum = 0;
+    while(n--) {
+        sum = x + y;
+        x = y;
+        y = sum;
+    }
+    return sum;
+}
+
 int main(int argc, char* argv[]) {
     if (argc != 2) {
         cout << "Usage: ./prog_name <n>" << endl;
@@ -44,6 +55,6 @@ int main(int argc, char* argv[]) {
     }
     int n = atoi(argv[1]);
     NthFibonacci obj;
-    cout << obj.fib3(n) << endl;
+    cout << obj.fib4(n) << endl;
     return 0;
 }
